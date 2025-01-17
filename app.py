@@ -82,17 +82,17 @@ st.sidebar.info("🔒 *Privacy*: Your data is not stored or shared.")
 # Main function
 def main():
     st.title("📧 SpamShield AI - Spam Email Classifier")
-    
     st.markdown("""
         Welcome to *SpamShield AI, a tool that uses **Machine Learning* to classify emails as either *Spam* or *Not Spam*.
     """)
-    
+
     # Header image
     st.image("https://via.placeholder.com/1000x300?text=SpamShield+AI", use_column_width=True, caption="Spam Email Classification")
 
     # Main content area
     with st.container():
         st.markdown("### 🔍 Email Classification")
+
         user_input = st.text_area(
             "✏ Enter the email content below:",
             height=250,
@@ -110,31 +110,29 @@ def main():
                     # Prepare input for model
                     data = [user_input]
                     vec = cv.transform(data).toarray()
-                    
+
                     # Predict the class
                     result = model.predict(vec)
                     confidence = model.predict_proba(vec).max() * 100
-                    
+
                     # Display results in a result box
                     st.markdown("### 📤 Email Content:")
                     st.code(user_input)
-
                     st.markdown("### 📊 Classification Result:")
 
                     if result[0] == 0:
                         st.success(f"✅ This is a *Not Spam* email ({confidence:.2f}% confidence).", icon="✅")
                     else:
                         st.error(f"🚫 This is a *Spam* email ({confidence:.2f}% confidence).", icon="🚫")
-                    
                 except Exception as e:
                     st.error(f"An error occurred while processing the email: {e}")
             else:
                 st.warning("⚠ Please enter some email content to classify.")
-    
+
     # Footer section
     st.markdown("---")
     st.markdown("Developed with ❤ using *Streamlit*")
 
 # Run the main function
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
