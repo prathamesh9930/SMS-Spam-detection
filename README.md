@@ -17,7 +17,7 @@ MailGuard AI is a Machine Learning-based application designed to classify emails
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/sahilganjave05/MailGuardAI.git
+   git clone [https://github.com/prathamesh9930/SMS-Spam-detection]
    ```
 
 2. Navigate to the project directory:
