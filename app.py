@@ -87,7 +87,7 @@ def main():
     """)
 
     # Header image
-    st.image("https://via.placeholder.com/1000x300?text=SpamShield+AI", use_column_width=True, caption="Spam Email Classification")
+    st.image("https://via.placeholder.com/1000x300?text=SpamShield+AI", use_container_width=True, caption="Spam Email Classification")
 
     # Main content area
     with st.container():
