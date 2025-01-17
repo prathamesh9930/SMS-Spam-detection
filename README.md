@@ -98,5 +98,5 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 ## Contact
 
 For any inquiries or feedback, please reach out to:
-- **Sahil Ganjave**
-- GitHub: [sahilganjave05](https://github.com/sahilganjave05)
+- **Prathamesh Gaikwad**
+- GitHub: https://github.com/prathamesh9930
