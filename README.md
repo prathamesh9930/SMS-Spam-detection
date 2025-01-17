@@ -5,25 +5,24 @@ SpamShield AI is a Machine Learning-based application designed to classify email
 
 📌 Features
 
-
-  Spam Detection: Classifies email content into "Spam" or "Not Spam."
-    Confidence Score: Displays the model's confidence level in the classification.
-    Interactive UI: A modern, intuitive interface using Streamlit.
-    AI-Powered: Utilizes Machine Learning for fast and reliable predictions.
-  🚀 Installation
+ Spam Detection: Classifies email content into "Spam" or "Not Spam."
+ Confidence Score: Displays the model's confidence level in the classification.
+ Interactive UI: A modern, intuitive interface using Streamlit.
+ AI-Powered: Utilizes Machine Learning for fast and reliable predictions.
+ 
+🚀 Installation
   
   Clone the repository:
   
-  
   git clone https://github.com/prathamesh9930/SMS-Spam-detection
+  
   Navigate to the project directory:
   
-  
   cd SpamShieldAI
+  
   Install the required dependencies:
-  
-  
   pip install -r requirements.txt
+  
   Ensure you have the spam.pkl (model) and vec.pkl (vectorizer) files in the project directory.
   
   🛠️ Usage
