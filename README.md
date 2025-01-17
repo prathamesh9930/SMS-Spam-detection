@@ -39,37 +39,60 @@ SpamShield AI is a Machine Learning-based application designed to classify email
   
   Enter the email content in the text area and click "Classify Email" to see the results.
   
+  
   📁 Project Structure
   
+  
   app.py: Main application file.
+  
   spam.pkl: Pre-trained model for spam classification.
+  
   vec.pkl: Vectorizer for text data preprocessing.
+  
   requirements.txt: List of Python dependencies.
+  
   README.md: Project documentation.
+  
   
   🛠️ Technologies Used
   
+  
   Python: Core programming language.
+  
   Streamlit: Web application framework.
+  
   scikit-learn: For model and vectorizer.
+  
   Pickle: Model serialization.
+  
   🤝 Contributing
+  
   
   Contributions are welcome! Follow these steps:
   
   Fork the repository.
+  
   Create a new branch for your feature/bug fix.
+  
   Commit your changes and push to your fork.
+  
   Submit a pull request.
+  
   📄 License
   
   This project is licensed under the MIT License. See the LICENSE file for details.
   
+  
   📬 Contact
+  
   
   For any inquiries or feedback, please reach out to:
   
   **Prathamesh Gaikwad**
+  
   GitHub: https://github.com/prathamesh9930
+  
   Email: prathameshgaikwad9137@gmail.com
+  
   Developed with ❤ using Streamlit
+  
