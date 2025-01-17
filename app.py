@@ -1,15 +1,20 @@
 import streamlit as st
 import pickle
 import streamlit.components.v1 as components
+
 # Set the page configuration
-st.set_page_config(page_title="MailGuard AI", page_icon="📬", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="Spam Detector", page_icon="🕵️‍♀️", layout="wide", initial_sidebar_state="expanded")
 
 # Load the model and vectorizer
 try:
     model = pickle.load(open('spam.pkl', 'rb'))
     cv = pickle.load(open('vec.pkl', 'rb'))
-except FileNotFoundError:
-    st.error("Model or vectorizer file not found. Please upload 'spam.pkl' and 'vec.pkl'.")
+except FileNotFoundError as e:
+    st.error(f"Model or vectorizer file not found. Please upload 'spam.pkl' and 'vec.pkl'. Error: {str(e)}")
+    st.stop()  # Stop execution if files are not found
+except Exception as e:
+    st.error(f"An error occurred while loading the model or vectorizer: {str(e)}")
+    st.stop()  # Stop execution if there is an error with loading
 
 # Custom HTML meta tags for social media sharing
 meta_tags = """
@@ -117,7 +122,7 @@ def main():
                             st.error(f"🚫 This is a **Spam** email ({confidence:.2f}% confidence).", icon="🚫")
                     
                 except Exception as e:
-                    st.error(f"An error occurred: {e}")
+                    st.error(f"An error occurred while classifying the email: {str(e)}")
             else:
                 st.warning("⚠️ Please enter some email content to classify.")
     
@@ -128,3 +133,4 @@ def main():
 # Run the main function
 if __name__ == "__main__":
     main()
+
